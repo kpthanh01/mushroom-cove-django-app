@@ -1,0 +1,1 @@
+# mushroom-cove-django-app
