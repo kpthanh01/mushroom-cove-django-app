@@ -15,7 +15,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href=""></a>About</li>
+        <li><a href="{% url "about" %}"></a>About</li>
         <li><a href=""></a>Explore</li>
         {% if user.is_authenticated %}
           <li>
