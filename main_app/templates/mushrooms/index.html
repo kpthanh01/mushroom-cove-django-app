@@ -4,4 +4,16 @@
 {% endblock head %}
 {% block content %}
   <h1>Mushroom Index Page</h1>
+  <section>
+    {% for item in mushrooms %}
+      <div>
+        <a href="{% url "mushroom-detail" item.id %}">
+        <div>
+          <p>Name: {{item.name}}</p>
+          <p>Scientific Name: {{item.scientific}}</p>
+          <p>Description: {{item.description}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
 {% endblock content %}

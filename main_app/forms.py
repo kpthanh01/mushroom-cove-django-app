@@ -4,7 +4,7 @@ from .models import Tracking
 class TrackingFrom(forms.ModelForm):
   class Meta:
     model = Tracking
-    fields = ['name', 'scientific', 'description']
+    fields = ['title', 'date', 'notes', 'location']
     widgets = {
       'date': forms.DateInput(
         format=('%Y-%m-%d'),
