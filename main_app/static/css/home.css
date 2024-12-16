@@ -21,10 +21,6 @@
   }
 }
 
-.info-container {
-  background-color: #FFF9F0;
-}
-
 .info-content-started {
   width: 50%;
   margin: auto;
@@ -48,7 +44,6 @@
 }
 
 .mailing-container {
-  background-color: #FFF9F0;
   padding-top: 8rem;
   color: white;
 }
