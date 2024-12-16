@@ -20,6 +20,9 @@ class Home(LoginView):
 class About(TemplateView):
   template_name = 'about.html'
 
+class Login(LoginView):
+  template_name = 'login.html'
+
 class CreateMushroom(LoginRequiredMixin, CreateView):
   model = Mushroom
   fields = '__all__'
