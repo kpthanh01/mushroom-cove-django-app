@@ -15,8 +15,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{% url "about" %}"></a>About</li>
-        <li><a href=""></a>Explore</li>
+        <li><a href="{% url "about" %}">About</a></li>
+        <li><a href="{% url "mushroom-index" %}">All Mushrooms</a></li>
+        <li><a href="{% url "mushroom-create" %}">Add Mushrooms</a></li>
         {% if user.is_authenticated %}
           <li>
             <form method="post" action="{% url "logout" %}">

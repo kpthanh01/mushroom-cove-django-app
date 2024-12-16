@@ -51,7 +51,8 @@ def record_mushroom(request, mushroom_id):
   if form.is_valid():
     new_tracking = form.save(commit=False)
     new_tracking.mushroom_id = mushroom_id
-  return redirect('home', mushroom_id=mushroom_id)
+    new_tracking.save()
+  return redirect('mushroom-detail', mushroom_id=mushroom_id)
 
 def signup(request):
   error_message = ''

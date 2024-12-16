@@ -4,4 +4,57 @@
 {% endblock head %}
 {% block content %}
   <h1>Mushroom Details</h1>
+  <section>
+    <h1>{{ mushroom.name }}</h1>
+    <p>Scientific Name: {{ mushroom.scientific }}</p>
+    <p>Description: {{ mushroom.description }}</p>
+    <div>
+      <a href="{% url "mushroom-update" mushroom.id %}">Edit</a>
+      <a href="{% url "mushroom-delete" mushroom.id %}">Delete</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Logs</h2>
+
+    <h3>Add a Records</h3>
+    <form
+      action="{% url "add-tracking" mushroom.id%}"
+      method="post"
+      autocomplete="off"
+    >
+      {% csrf_token %}
+      {{ tracking_form.as_p}}
+      <button type="submit">Record Mushroom</button>
+    </form>
+
+    <h3>Past Mushrooms</h3>
+
+    {% if mushroom.tracking_set.all.count %}
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in mushroom.tracking_set.all %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.location }}</td>
+              <td>{{ item.notes }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <div>
+        <p>There are no records for {{ mushroom.name }}</p>
+      </div>
+    {% endif %}
+  </section>
 {% endblock content %}
