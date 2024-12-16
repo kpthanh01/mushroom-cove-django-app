@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Mushroom, Tracking
 
-# Register your models here.
+admin.site.register(Mushroom)
+admin.site.register(Tracking)

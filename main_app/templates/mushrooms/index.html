@@ -6,12 +6,13 @@
   <h1>Mushroom Index Page</h1>
   <section>
     {% for item in mushrooms %}
-      <div>
+      <div class="mushroom-card">
         <a href="{% url "mushroom-detail" item.id %}">
-        <div>
-          <p>Name: {{item.name}}</p>
-          <p>Scientific Name: {{item.scientific}}</p>
-        </div>
+          <div>
+            <p>Name: {{item.name}}</p>
+            <p>Scientific Name: {{item.scientific}}</p>
+          </div>
+        </a>
       </div>
     {% endfor %}
   </section>
