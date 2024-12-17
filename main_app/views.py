@@ -11,8 +11,6 @@ from .models import Mushroom
 
 from django.http import HttpResponse
 
-# Create your views here.
-
 # Classes
 class Home(LoginView):
   template_name = 'home.html'
@@ -37,7 +35,7 @@ class MushroomDelete(LoginRequiredMixin, DeleteView):
 
 # Functions
 def mushroom_index(request):
-  mushrooms = Mushroom.objects.all()
+  mushrooms = Mushroom.objects.filter(user=request.user)
   return render(request, 'mushrooms/index.html', {'mushrooms': mushrooms})
 
 def mushroom_detail(request, mushroom_id):

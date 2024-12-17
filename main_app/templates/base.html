@@ -25,10 +25,7 @@
             </li>
             {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url "mushroom-index" %}">Catalogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url "mushroom-create" %}">Add Mushrooms</a>
+                <a class="nav-link" href="{% url "mushroom-index" %}">Catalog</a>
               </li>
             {% endif %}
           </ul>

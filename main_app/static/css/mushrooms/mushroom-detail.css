@@ -1,0 +1,66 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-header {
+  background-color: #161B26;
+  color: white;
+  text-align: center;
+  padding: 3em 0 5em;
+  clip-path: ellipse( 110% 100% at 30% 0%);
+}
+
+img {
+  width: 25em;
+  height: 20em;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.detail-content {
+  margin: 3em 0;
+}
+
+.description {
+  font-size: 18px;
+  width: 50%;
+  margin: 20px 0 40px;
+}
+
+.record-form {
+  background-color: #161B26;
+  color: white;
+  width: 50%;
+  margin: 0 auto 3em;
+  padding: 3em 0;
+  border-radius: 10px;
+
+  h3 {
+    margin-bottom: 40px;
+  }
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+  }
+}
+
+.mushroom-recordings {
+  margin-bottom: 3em;
+
+  td, th {
+    margin-right: 1em;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+section {
+  margin: 5em 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: auto;
+  padding: 40px 0;
+  background-color: #161B26;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: 5em;
+  margin-top: 20px;
+}

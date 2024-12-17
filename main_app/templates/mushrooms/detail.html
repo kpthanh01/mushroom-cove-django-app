@@ -1,23 +1,54 @@
 {% extends "base.html" %}
 {% load static %}
 {% block head %}
+  <link rel="stylesheet" href="{% static "css/mushrooms/mushroom-detail.css" %}">
 {% endblock head %}
 {% block content %}
-  <h1>Mushroom Details</h1>
-  <section>
+  <section class="detail-header">
     <h1>{{ mushroom.name }}</h1>
-    <p>Scientific Name: {{ mushroom.scientific }}</p>
-    <p>Description: {{ mushroom.description }}</p>
+    <h4>({{ mushroom.scientific }})</h4>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static "images/mushroom1.jpg" %}" alt="mushroom1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static "images/mushroom2.jpg" %}" alt="mushroom2">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static "images/mushroom3.jpg" %}" alt="mushroom3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <section class="detail-content">
+    <h2>At a Glance</h2>
+    <p class="description">{{ mushroom.description }}</p>
     <div>
-      <a href="{% url "mushroom-update" mushroom.id %}">Edit</a>
-      <a href="{% url "mushroom-delete" mushroom.id %}">Delete</a>
+      <button class="btn btn-warning">
+        <a href="{% url "mushroom-update" mushroom.id %}">Edit</a>
+      </button>
+      <button class="btn btn-warning">
+        <a href="{% url "mushroom-delete" mushroom.id %}">Delete</a>
+      </button>
     </div>
   </section>
 
-  <section>
-    <h2>Logs</h2>
-
-    <h3>Add a Records</h3>
+  <section class="record-form">
+    <h3>Record your findings for {{mushroom.name}}</h3>
     <form
       action="{% url "add-tracking" mushroom.id%}"
       method="post"
@@ -25,11 +56,11 @@
     >
       {% csrf_token %}
       {{ tracking_form.as_p}}
-      <button type="submit">Record Mushroom</button>
+      <button class="btn btn-warning" type="submit">Record Mushroom</button>
     </form>
-
-    <h3>Past Mushrooms</h3>
-
+  </section>
+  <section class="mushroom-recordings">
+    <h3>Records of {{mushroom.name}}</h3>
     {% if mushroom.tracking_set.all.count %}
       <table>
         <thead>
