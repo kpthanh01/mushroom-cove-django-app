@@ -6,7 +6,7 @@
 Mushroom Cove is a website to educate and inform users about the world of mushroom. More specifically, it's core feature is for users to create their own mushroom catalog. For each mushroom they decide to add to their catalog, they can also make a track record for those specific mushrooms. Joting down information such as 'Notes', 'Location', and 'Date' for when they encounter/forage these mushrooms. Mushroom cove is a place for enthusiast to learn about mushrooms, and a great place to start any interest in these amazing species.
 
 ## Getting Started
-Our final product: https://bundleup-ga.netlify.app/
+Final product: https://mushroomcove-d1e36e142f55.herokuapp.com/
 
 Trello board: [https://trello.com/b/UVM2AnBp/mushroom-cove](https://trello.com/b/UVM2AnBp/mushroom-cove)
 
