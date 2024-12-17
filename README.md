@@ -7,9 +7,9 @@ Mushroom Cove is a website to educate and inform users about the world of mushro
 ## Getting Started
 Our final product: https://bundleup-ga.netlify.app/
 
-Trello board: [https://trello.com/b/Ui2i28Zs/bundleup](https://trello.com/b/UVM2AnBp/mushroom-cove)
+Trello board: [https://trello.com/b/UVM2AnBp/mushroom-cove](https://trello.com/b/UVM2AnBp/mushroom-cove)
 
-Repository: [https://github.com/kpthanh01/BundleUp_Express](https://github.com/kpthanh01/mushroom-cove-django-app)
+Repository: [https://github.com/kpthanh01/mushroom-cove-django-app](https://github.com/kpthanh01/mushroom-cove-django-app)
 
 ## Attributions
 - https://getbootstrap.com/
