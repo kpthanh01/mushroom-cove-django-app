@@ -18,6 +18,9 @@ class Home(LoginView):
 class About(TemplateView):
   template_name = 'about.html'
 
+class Explore(TemplateView):
+  template_name = 'about.html'
+
 class Login(LoginView):
   template_name = 'login.html'
 
