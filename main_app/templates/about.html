@@ -1,8 +1,42 @@
 {% extends "base.html" %}
 {% load static %}
 {% block head %}
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="{% static "css/about.css" %}">
 {% endblock head %}
 {% block content %}
-  <h1>About Page</h1>
+  <section class="image-container">
+    <img src="{% static "images/mushroom-forage.jpg" %}" alt="mushroom-forage">
+  </section>
+  <section class="intro-container">
+    <div>
+      <h2>Our Mission</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, aspernatur et excepturi tenetur magnam ea ipsum rerum animi fugit at quis, id sed autem accusantium nulla sunt, odit dolor labore.</p>
+    </div>
+  </section>
+  <section class="info-container">
+    <div class="info-content-started">
+      <h2>What we bring to the table</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas sequi, quibusdam iure, hic dolorum illo earum a nemo aperiam aliquam facilis vero possimus qui, deserunt tempora vitae placeat voluptas. Ipsam.</p>
+    </div>
+    <div class="info-content-find">
+      <img src="{% static "images/mushroom-basket.jpg" %}" alt="mushroom-basket">
+      <img src="{% static "images/mushroom2.jpg" %}" alt="mushroom2">
+    </div>
+  </section>
+  <section class="mailing-container">
+    <div class="mailing-content blue-gradient">
+      <div>
+        <h1>JOIN US ON OUR MAILING LIST</h1>
+        <p class="mailing-message">Let us send you the latest news and events</p>
+      </div>
+      <div class="news-letter-signup">
+        <label for="email">Email</label>
+        <input id="email" type="text">
+        <label for="zip">Zip</label>
+        <input id="zip" type="text">
+        <p>This site is protected by reCAPTCHA and the Google <span>Privacy Policy</span> and <span>Teams of Service</span> apply</p>
+        <button class="btn btn-warning">Sign Up</button>
+      </div>
+    </div>
+  </section>
 {% endblock content %}
